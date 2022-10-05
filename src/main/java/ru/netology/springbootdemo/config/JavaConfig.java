@@ -13,7 +13,7 @@ public class JavaConfig {
     private boolean dev;
 
     @Bean
-    @ConditionalOnProperty(prefix = "netology.profile", name = "dev", havingValue = "true")
+    @ConditionalOnProperty(prefix = "netology.profile", name = "dev", havingValue = "true",matchIfMissing = true)
     public SystemProfile devProfile() {
         return new DevProfile();
     }
